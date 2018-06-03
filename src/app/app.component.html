@@ -1,0 +1,22 @@
+<header>
+  <h1>{{title}}</h1>
+
+  <p><a [routerLink]="['seattle']">Seattle WA</a> |
+     <a [routerLink]="['sanjose']">San Jose CA</a> |
+     <a [routerLink]="['burbank']">Burbank CA</a> |
+     <a [routerLink]="['dallas']">Dallas TX</a> |
+     <a [routerLink]="['dc']">Washington DC</a> |
+     <a [routerLink]="['chicago']">Chicago IL</a>
+  </p>
+</header>
+
+<fieldset>
+  <legend>Weather and stuff...</legend>
+  <router-outlet></router-outlet>
+</fieldset>
+
+<button (click)='getWeather()'>Get The weather for Seattle</button>
+
+<div id="seattle">
+  {{ weather | json }}
+</div>
